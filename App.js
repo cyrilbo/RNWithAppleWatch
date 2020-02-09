@@ -8,8 +8,6 @@ const App = () => {
     Watch.sendMessage({message}, error => {
       if (error) {
         Alert.alert(`the message "${message}" can't be sent`);
-      } else {
-        Alert.alert(`the message "${message}" has been sent`);
       }
     });
   };
