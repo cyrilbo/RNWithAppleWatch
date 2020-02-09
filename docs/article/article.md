@@ -206,4 +206,4 @@ Restart the application. You can now send a message from the iphone simulator to
 
 ## Conclusion
 
-Congratulations ! You have run your first Apple Watch Application. If you want to go deeper on this subject, [react-native-watch-connectivity](https://github.com/mtford90/react-native-watch-connectivity) gives you everething you need to handle the reachability of the watch, the paring status, file transfer and more. You will quickly be able to add more value to your React Native Application !
+Congratulations ! You have run your first Apple Watch Application. If you want to go deeper on this subject, [react-native-watch-connectivity](https://github.com/mtford90/react-native-watch-connectivity) gives you everything you need to handle the reachability of the watch, the paring status, file transfer and more. You will quickly be able to add more value to your React Native Application !
