@@ -2,7 +2,7 @@
 
 ## Introduction
 
-SmartWatch market has grown a lot in the past few years. If you are currently developping a smartphone application you may be tempted to add an extension to this app running on a smartwatch.
+The SmartWatch market has grown a lot in the past few years. If you are currently developping a smartphone application you may be tempted to add an extension to this app running on a smartwatch.
 
 In this tutorial, you will not learn how to build an apple watch app using React Native. Nevertheless, you will learn how to add a native Apple Watch extension to your existing React Native application.
 
@@ -31,6 +31,7 @@ cd RNWithAppleWatch && react-native run-ios
 ```
 
 You should see this screen :
+
 ![](./assets/1-react-native-init.png)
 
 Then, open the project with your favorite text editor. We are going to modify our `app.js` file to look like this :
@@ -75,7 +76,7 @@ Now let the fun part begin.
 
 ## Create a Watch app
 
-Open your the `ios` subdirectory of your react-native project using `xcode`.
+Open the `ios` subdirectory of your react-native project using `xcode`.
 On the left side of the screen :
 
 1. select the project navigator.
@@ -83,7 +84,7 @@ On the left side of the screen :
 
 ![](./assets/3-xcode-project-file-anotated.png)
 
-You will see the list of all the targets of your iOS application. A target defines a single product that can be build. By default we have targets for iOS and for tvOS. We are going to add a new target for WatchOS. Click on the + button at the bottom of the targets list.
+You will see the list of all the targets of your iOS application. A target defines a single product that can be built. By default we have targets for iOS and for tvOS. We are going to add a new target for WatchOS. Click on the + button at the bottom of the targets list.
 
 ![](./assets/4-xcode-add-watchOS-target.png)
 
@@ -179,11 +180,11 @@ Above the representation of the watch, the little circle is a direct link to you
 ![](./assets//13-link-outlet.gif)
 
 Now your storyboard and your controller can interact.
-That's all for the native part ! On the next part, we will move on the react native part of the tutorial.
+That's all for the native part! On the next part, we will move on to the react native part of the tutorial.
 
 ## Connect your React Native App with your WatchOS App
 
-As our application is developed in React Native, we need to use a bridge to have access to the WatchConnectivity API. Fortunately, [react-native-watch-connectivity](https://github.com/mtford90/react-native-watch-connectivity) already implement all what we need. In order to install this library, run :
+As our application is developed in React Native, we need to use a bridge to have access to the WatchConnectivity API. Fortunately, [react-native-watch-connectivity](https://github.com/mtford90/react-native-watch-connectivity) already implements everything we need. In order to install this library, run :
 
 ```bash
 yarn add react-native-watch-connectivity
@@ -202,8 +203,8 @@ const sendMessageToAppleWatch = () => {
 };
 ```
 
-Restart the application. You can now send a message from the iphone simulator to the apple watch simulator !
+Restart the application. You can now send a message from the iphone simulator to the apple watch simulator!
 
 ## Conclusion
 
-Congratulations ! You have run your first Apple Watch Application. If you want to go deeper on this subject, [react-native-watch-connectivity](https://github.com/mtford90/react-native-watch-connectivity) gives you everything you need to handle the reachability of the watch, the paring status, file transfer and more. You will quickly be able to add more value to your React Native Application !
+Congratulations! You have run your first Apple Watch Application. If you want to go deeper on this subject, [react-native-watch-connectivity](https://github.com/mtford90/react-native-watch-connectivity) gives you everything you need to handle the reachability of the watch, the paring status, file transfer and more. You will quickly be able to add more value to your React Native Application!
