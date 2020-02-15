@@ -92,7 +92,7 @@ We have multiple options here. We will focus on the `Application` list. `Game Ap
 
 1. Set the name of your watch app
 2. Set the name of your organization
-3. Unselect `Include Notification Scene`
+3. Unselect `Include Notification Scene`, it is needed only if we want to customize them.
 
 ![](./assets/5-xcode-remove-notifications-anotated.png)
 
@@ -143,6 +143,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
   @IBOutlet weak var textToDisplay: WKInterfaceLabel!
    var session: WCSession?
 
+  // Initializes the interface controller with the specified context data
   override func awake(withContext context: Any?) {
     super.awake(withContext: context)
     if WCSession.isSupported() {
@@ -152,11 +153,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
   }
 
-  func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    print("An error occured")
-  }
+  // Called when the activation of a session finishes
+  func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
 
-  func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+  // Called when an immediate message arrives
+  func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
     print("watch received message", message);
     let text = message["message"] as? String
     self.textToDisplay.setText(text)
@@ -191,7 +192,7 @@ yarn add react-native-watch-connectivity
 react-native link
 ```
 
-In your `App.tsx` file replace the code of `sendMessageToAppleWatch` with the following one :
+In your `App.js` file replace the code of `sendMessageToAppleWatch` with the following one :
 
 ```tsx
 const sendMessageToAppleWatch = () => {
