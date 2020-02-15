@@ -157,7 +157,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
   func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
 
   // Called when an immediate message arrives
-  func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+  func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
     print("watch received message", message);
     let text = message["message"] as? String
     self.textToDisplay.setText(text)
